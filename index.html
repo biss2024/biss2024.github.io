@@ -36,7 +36,6 @@
     }
   }
 
-
   .topimgtxt {
   position: absolute;
   top: 80%;
@@ -45,7 +44,46 @@
   }
 
   .mySlides {display:none;}
+  
+  .scroll-down {
+  position: absolute;
+  left: 50%;
+  color: #fff;
+  z-index: 1;
+  margin-top: 85px;
+  }
 
+  a {
+  pointer-events: auto;
+  -webkit-transition: color .2s;
+  -o-transition: color .2s;
+  transition: color .2s;
+    transition-property: color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    transition-behavior: ;
+  }
+
+  @media (max-width: 991px) {
+  .link-to-top {
+    width: max(7.29vw, 90px);
+    height: max(7.29vw, 90px);
+  }
+  }
+  
+  .link-to-top {
+  position: fixed;
+  bottom: 0;
+  width: 140px;
+  height: 140px;
+  right: 0;
+  z-index: 9;
+  transition: none;
+  display: none;
+  }
+  
+  
   </style>
   
   <title>BI Summer School 2024</title>
@@ -53,6 +91,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+
 
 </head>
 
@@ -77,11 +116,15 @@
 </div>
 
 
-<video id="video-background" autoplay loop muted width="100%" style="padding-top:50px">
+<video id="video-background" autoplay loop muted width="100%" style="padding-top:50px; z-index: 1;">
     <source src="video/biss2024-2.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
-
+<!--
+<a id="banner-scroll-down" class="scroll-down" aria-label="scroll down to first section" data-module-dynamic="scroll-to" href="#summary">
+Skip to Main Content
+</a>
+-->
 
 <!-- Page content -->
 <div class="w3-content w3-padding" style="max-width:1564px">
@@ -375,7 +418,7 @@ Presentations and discussions will be on vital themes - see below. The esteemed 
     <center><h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Registration</h1></center>
   </div>
    <center>
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfPMsQ7QTs-6eazB5LAQZxuyNme4zakmvhIzrT-akX7QgevSg/viewform?embedded=true" width="100%" height=1400 frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfPMsQ7QTs-6eazB5LAQZxuyNme4zakmvhIzrT-akX7QgevSg/viewform?embedded=true" width="100%" height=1761 frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
    </center>
 
   <!-- About Section -->
@@ -388,10 +431,36 @@ The Bhaktivedanta Institute for Higher Studies (BIHS) is a recently-formulated c
 
 
 </p>
-<center>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l4 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+          <img src="https://bi-neuro.github.io/img/bi_team.png" alt="Image" style="width:100%">
+        <p style="text-align:center">Mind-Brain Interface Conference 2021</p>
+      </div>
+    </div>
+    <div class="w3-col l4 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+          <img src="images/bi-photo-1.jpg" alt="Image" style="width:100%">
+        <p style="text-align:center">BIHS Cosmology Conference 2023</p>
+      </div>
+    </div>
+    <div class="w3-col l4 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <img src="images/bi-photo-2.jpg" alt="Image" style="width:100%">
+        <p style="text-align:center">BIHS Cosmology Conference 2023</p>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  
+  
+<!--
 <img class="w3-image" src="https://bi-neuro.github.io/img/bi_team.png" alt="Part of the BI-Neuro Team at the December 2021 MBI Conference" width="auto">
 <br><br>In-person participants at the Mind-Brain Interface conference, held at the BI House in Gainesville, FL, in December 2021
-</center>
+-->
+
    </div>
 
     <!-- Affiliates Section -->
@@ -453,6 +522,8 @@ The Bhaktivedanta Institute for Higher Studies (BIHS) is a recently-formulated c
 <footer class="w3-center">
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
+
+<a href="#" class="link-to-top scroll-to-top local" style="font-size: 19px; display: inline;"><img src="https://www.iima.ac.in/themes/iima/images/back-to-top.svg" alt="IIMA" class="w-100" style="font-size: 19px;"></a>
 
 </body>
 </html>
